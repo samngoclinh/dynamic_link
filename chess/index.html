@@ -1,1 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>X-Ray Chess · Tactical Radar - Tải Ứng Dụng</title>
+  
+  <!-- ======================================================== -->
+  <!-- 🏷️ META OPEN GRAPH & TWITTER CARD (FACEBOOK SCALABILITY)  -->
+  <!-- ======================================================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samngoclinh.github.io/dynamic_link/chess/">
+  <meta property="og:title" content="⚔️ THÁCH ĐẤU: Trắng đi - Chiếu hết sau 2 nước?">
+  <meta property="og:description" content="Nhìn thấu toàn bộ trường lực chiến thuật bằng AI Stockfish trên X-Ray Chess. Tải miễn phí ngay trên App Store & Google Play!">
+  <meta property="og:image" content="https://samngoclinh.github.io/dynamic_link/chess/og_challenge.jpg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:site_name" content="X-Ray Chess">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="⚔️ THÁCH ĐẤU: Trắng đi - Chiếu hết sau 2 nước?">
+  <meta name="twitter:description" content="Nhìn thấu thế trận cùng AI Stockfish trên X-Ray Chess. Tải miễn phí ngay!">
+  <meta name="twitter:image" content="https://samngoclinh.github.io/dynamic_link/chess/og_challenge.jpg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <script>
+    // =========================================================================
+    // ⚙️ CẤU HÌNH LINK TẢI CHO X-RAY CHESS (SỬA DỄ DÀNG NGAY TẠI ĐÂY)
+    // =========================================================================
+    const IOS_STORE_URL     = "https://apps.apple.com/vn/app/chess-play-learn/id329218549"; 
+    const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.xraychess.app"; 
+    const WEB_FALLBACK_URL  = "https://viethoangdtlmb-ai.github.io/App_co_vua/";
+
+    // ⚡ CHUYỂN TIẾP TỨC THÌ 0 GIÂY (INSTANT 0MS - HOÀN TOÀN TÀNG HÌNH)
+    (function instantRedirect() {
+      var ua = navigator.userAgent || navigator.vendor || window.opera || '';
+      var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+      var isAndroid = /android/i.test(ua);
+
+      if (isIOS) {
+        window.location.replace(IOS_STORE_URL);
+      } else if (isAndroid) {
+        window.location.replace(ANDROID_STORE_URL);
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: radial-gradient(circle at 50% 20%, #172554 0%, #0b0f19 80%);
+      color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-x: hidden;
+    }
+
+    .redirect-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 24px;
+      padding: 28px 24px;
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(14, 165, 233, 0.15);
+      position: relative;
+    }
+
+    .hero-banner-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(14, 165, 233, 0.25);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      background: #000;
+    }
+
+    .hero-banner-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-banner-wrapper:hover .hero-banner-img {
+      transform: scale(1.04);
+    }
+
+    .hero-banner-badge {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(11, 15, 25, 0.95), rgba(11, 15, 25, 0.5) 70%, transparent);
+      padding: 18px 12px 10px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #38bdf8;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .radar-pulse {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #0284c7, #0ea5e9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 0 30px rgba(14, 165, 233, 0.5);
+      position: relative;
+    }
+
+    .radar-pulse::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 26px;
+      border: 2px solid rgba(56, 189, 248, 0.4);
+      animation: pulseAnim 2s infinite ease-out;
+    }
+
+    @keyframes pulseAnim {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.25); opacity: 0; }
+    }
+
+    .app-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    .app-subtitle {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+
+    .status-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 28px;
+    }
+
+    .status-text {
+      font-size: 0.92rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .status-spinner {
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(56, 189, 248, 0.3);
+      border-top-color: #38bdf8;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .actions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn-store {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 0.98rem;
+      font-weight: 700;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .btn-apple {
+      background: #ffffff;
+      color: #000000;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-apple:hover {
+      background: #f1f5f9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-google {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #ffffff;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 4px 20px rgba(2, 132, 199, 0.35);
+    }
+
+    .btn-google:hover {
+      background: linear-gradient(135deg, #0369a1, #075985);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(2, 132, 199, 0.5);
+    }
+
+    .btn-web {
+      background: rgba(255, 255, 255, 0.05);
+      color: #94a3b8;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.88rem;
+      margin-top: 6px;
+    }
+
+    .btn-web:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f8fafc;
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .btn-store:active {
+      transform: scale(0.97);
+    }
+
+    .footer-note {
+      font-size: 0.75rem;
+      color: #475569;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="redirect-card">
+    <!-- Hero Banner Trực Quan (Linh hoạt đổi ảnh bằng file og_challenge.jpg) -->
+    <div class="hero-banner-wrapper">
+      <img src="og_challenge.jpg" alt="X-Ray Chess AI Tactical Radar" class="hero-banner-img">
+      <div class="hero-banner-badge">
+        <span>⚔️ TRẮNG ĐI - CHIẾU HẾT SAU 2 NƯỚC?</span>
+      </div>
+    </div>
+
+    <h1 class="app-title" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <img src="favicon.png" alt="X-Ray Chess Logo" style="width: 32px; height: 32px; border-radius: 8px; object-fit: contain; box-shadow: 0 0 14px rgba(56, 189, 248, 0.5);">
+      <span>X-Ray Chess</span>
+    </h1>
+    <p class="app-subtitle">AI Tactical Radar · FIDE Stockfish</p>
+
+    <div class="status-box">
+      <div class="status-text" id="status-desc">
+        <span class="status-spinner"></span>
+        <span>Đang kết nối tới kho ứng dụng...</span>
+      </div>
+    </div>
+
+    <div class="actions-list">
+      <a id="btn-apple-store" href="#" class="btn-store btn-apple">
+        <span>🍏 Tải Trên App Store (iOS)</span>
+      </a>
+      <a id="btn-google-play" href="#" class="btn-store btn-google">
+        <span>🤖 Tải Trên Google Play (Android)</span>
+      </a>
+      <a id="btn-web-play" href="#" class="btn-store btn-web">
+        <span>🌐 Chơi Trực Tiếp Trên Web</span>
+      </a>
+    </div>
+
+    <p class="footer-note">Hỗ trợ iOS 14+ & Android 8+ · Miễn phí hoàn toàn</p>
+  </div>
+
+  <script>
+    // Cập nhật link cho các nút bấm thủ công dự phòng trên Máy tính / Desktop
+    if (document.getElementById('btn-apple-store')) document.getElementById('btn-apple-store').href = IOS_STORE_URL;
+    if (document.getElementById('btn-google-play')) document.getElementById('btn-google-play').href = ANDROID_STORE_URL;
+    if (document.getElementById('btn-web-play')) document.getElementById('btn-web-play').href = WEB_FALLBACK_URL;
+    
+    // Nếu vào bằng máy tính, cập nhật dòng mô tả
+    var statusDesc = document.getElementById('status-desc');
+    if (statusDesc) statusDesc.innerHTML = '⚡ Chọn nền tảng để trải nghiệm ngay:';
+  </script>
+</body>
+</html>
