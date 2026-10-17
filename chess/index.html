@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>X-Ray Chess · Tactical Radar - Tải Ứng Dụng</title>
+  <title>X-Ray Chess · Tactical Radar - Download App</title>
   
   <!-- ======================================================== -->
   <!-- 🏷️ META OPEN GRAPH & TWITTER CARD (FACEBOOK SCALABILITY)  -->
   <!-- ======================================================== -->
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://samngoclinh.github.io/dynamic_link/chess/">
-  <meta property="og:title" content="⚔️ THÁCH ĐẤU: Trắng đi - Chiếu hết sau 2 nước?">
-  <meta property="og:description" content="Nhìn thấu toàn bộ trường lực chiến thuật bằng AI Stockfish trên X-Ray Chess. Tải miễn phí ngay trên App Store & Google Play!">
+  <meta property="og:title" content="X-Ray Chess: Play Chess with X-Ray Vision">
+  <meta property="og:description" content="Automatically projects lasers to reveal every hidden trap in chess.">
   <meta property="og:image" content="https://samngoclinh.github.io/dynamic_link/chess/og_challenge.jpg">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="720">
   <meta property="og:site_name" content="X-Ray Chess">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="⚔️ THÁCH ĐẤU: Trắng đi - Chiếu hết sau 2 nước?">
-  <meta name="twitter:description" content="Nhìn thấu thế trận cùng AI Stockfish trên X-Ray Chess. Tải miễn phí ngay!">
+  <meta name="twitter:title" content="X-Ray Chess: Play Chess with X-Ray Vision">
+  <meta name="twitter:description" content="Automatically projects lasers to reveal every hidden trap in chess.">
   <meta name="twitter:image" content="https://samngoclinh.github.io/dynamic_link/chess/og_challenge.jpg">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
@@ -28,9 +29,9 @@
     // =========================================================================
     // ⚙️ CẤU HÌNH LINK TẢI CHO X-RAY CHESS (SỬA DỄ DÀNG NGAY TẠI ĐÂY)
     // =========================================================================
-    const IOS_STORE_URL     = "https://apps.apple.com"; 
-    const ANDROID_STORE_URL = "https://play.google.com"; 
-    const WEB_FALLBACK_URL  = "https://google.com";
+    const IOS_STORE_URL     = "https://apps.apple.com/"; 
+    const ANDROID_STORE_URL = "https://play.google.com/"; 
+    const WEB_FALLBACK_URL  = "https://google.com/";
 
     // ⚡ CHUYỂN TIẾP TỨC THÌ 0 GIÂY (INSTANT 0MS - HOÀN TOÀN TÀNG HÌNH)
     (function instantRedirect() {
@@ -275,7 +276,7 @@
     <div class="hero-banner-wrapper">
       <img src="og_challenge.jpg" alt="X-Ray Chess AI Tactical Radar" class="hero-banner-img">
       <div class="hero-banner-badge">
-        <span>⚔️ TRẮNG ĐI - CHIẾU HẾT SAU 2 NƯỚC?</span>
+        <span>⚡ PLAY CHESS WITH X-RAY VISION</span>
       </div>
     </div>
 
@@ -288,23 +289,23 @@
     <div class="status-box">
       <div class="status-text" id="status-desc">
         <span class="status-spinner"></span>
-        <span>Đang kết nối tới kho ứng dụng...</span>
+        <span>Connecting to store...</span>
       </div>
     </div>
 
     <div class="actions-list">
       <a id="btn-apple-store" href="#" class="btn-store btn-apple">
-        <span>🍏 Tải Trên App Store (iOS)</span>
+        <span>🍏 Download on the App Store (iOS)</span>
       </a>
       <a id="btn-google-play" href="#" class="btn-store btn-google">
-        <span>🤖 Tải Trên Google Play (Android)</span>
+        <span>🤖 Get it on Google Play (Android)</span>
       </a>
       <a id="btn-web-play" href="#" class="btn-store btn-web">
-        <span>🌐 Chơi Trực Tiếp Trên Web</span>
+        <span>🌐 Play Instantly on Web</span>
       </a>
     </div>
 
-    <p class="footer-note">Hỗ trợ iOS 14+ & Android 8+ · Miễn phí hoàn toàn</p>
+    <p class="footer-note">Supports iOS 14+ & Android 8+ · 100% Free</p>
   </div>
 
   <script>
@@ -315,7 +316,7 @@
     
     // Nếu vào bằng máy tính, cập nhật dòng mô tả
     var statusDesc = document.getElementById('status-desc');
-    if (statusDesc) statusDesc.innerHTML = '⚡ Chọn nền tảng để trải nghiệm ngay:';
+    if (statusDesc) statusDesc.innerHTML = '⚡ Choose your platform to play instantly:';
   </script>
 </body>
 </html>
