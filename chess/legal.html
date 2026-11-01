@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service & Privacy Policy - X-Ray Chess</title>
-  <meta name="description" content="Terms of Service and Privacy Policy for X-Ray Chess application.">
+  <title>Điều Khoản Dịch Vụ & Chính Sách Bảo Mật | Terms of Service & Privacy Policy - X-Ray Chess</title>
+  <meta name="description" content="Điều khoản dịch vụ và chính sách quyền riêng tư của ứng dụng X-Ray Chess. Terms of Service and Privacy Policy for X-Ray Chess.">
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
     :root {
@@ -178,35 +178,6 @@
       border-color: var(--accent-cyan);
       transform: translateY(-1.5px);
     }
-    .subscription-box {
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.28);
-      border-radius: 14px;
-      padding: 1.25rem 1.4rem;
-      margin: 1.2rem 0 1.6rem 0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    }
-    .btn-manage-sub {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 9px 18px;
-      background: linear-gradient(135deg, #0284c7, #0ea5e9);
-      border: 1px solid #38bdf8;
-      border-radius: 9px;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.88rem;
-      margin-top: 12px;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
-    }
-    .btn-manage-sub:hover {
-      background: linear-gradient(135deg, #0369a1, #0284c7);
-      box-shadow: 0 6px 18px rgba(14, 165, 233, 0.45);
-      transform: translateY(-1.5px);
-    }
     .copyright-note {
       font-size: 0.8rem;
       color: var(--text-muted);
@@ -215,18 +186,74 @@
 </head>
 <body>
   <div class="legal-container">
-    <!-- Top Bar -->
+    <!-- Top Bar with Language Switcher -->
     <div class="top-bar">
       <div class="badge-tag">
         <span>⚡ X-RAY CHESS</span> · <span>LEGAL POLICY</span>
       </div>
       <div class="top-bar-right">
-        <button type="button" class="btn-close-legal" onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = 'index.html'; }" title="Close & Return">✕</button>
+        <div class="lang-switcher">
+          <button id="btn-lang-vi" class="lang-btn active" onclick="switchLanguage('vi')">🇻🇳 Tiếng Việt</button>
+          <button id="btn-lang-en" class="lang-btn" onclick="switchLanguage('en')">🇬🇧 English</button>
+        </div>
+        <button type="button" class="btn-close-legal" onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = 'index.html'; }" title="Đóng & Quay lại">✕</button>
       </div>
     </div>
 
-    <!-- ENGLISH & VIETNAMESE CONTENT (TERMS OF SERVICE & PRIVACY POLICY) -->
-    <div id="content-en">
+    <!-- NỘI DUNG TIẾNG VIỆT (NGUYÊN VĂN 100%) -->
+    <div id="content-vi">
+      <h1>ĐIỀU KHOẢN DỊCH VỤ & CHÍNH SÁCH BẢO MẬT</h1>
+      <div class="meta-subtitle">(TERMS OF SERVICE & PRIVACY POLICY)<br>Cập nhật: Tháng 10/2026 · Áp dụng cho ứng dụng X-Ray Chess</div>
+
+      <p class="intro-p">Chào mừng bạn đến với X-Ray Chess. Bằng việc tải về, cài đặt, truy cập hoặc sử dụng ứng dụng, bạn đồng ý tuân thủ và chịu sự ràng buộc của toàn bộ các điều khoản thống nhất dưới đây:</p>
+
+      <h3>Điều 1: Chấp Thuận Điều Khoản & Quyền Sở Hữu Trí Tuệ</h3>
+      <p>Khi cài đặt hoặc sử dụng ứng dụng, bạn xác nhận đã đọc, hiểu và đồng ý với toàn bộ các điều khoản này. Nếu không đồng ý với bất kỳ phần nào, vui lòng ngừng sử dụng ứng dụng.</p>
+      <p>Toàn bộ giao diện người dùng, cấu trúc trực quan hóa, hệ thống đồ họa, công nghệ tính toán và mã nguồn ứng dụng thuộc quyền sở hữu trí tuệ độc quyền của nhà phát triển.</p>
+      <p>Nghiêm cấm mọi hành vi sao chép, can thiệp hoặc dịch ngược mã nguồn (reverse engineering) dưới mọi hình thức khi chưa có sự đồng ý bằng văn bản từ tác giả.</p>
+
+      <h3>Điều 2: Thu Thập & Xử Lý Dữ Liệu Cục Bộ</h3>
+      <p>Nguyên tắc xử lý dữ liệu: Ứng dụng tôn trọng quyền riêng tư của bạn và tuân thủ nguyên tắc ưu tiên xử lý dữ liệu cục bộ: các thuật toán phân tích, tính toán nước đi và lịch sử ván cờ có thể được xử lý và lưu trữ trực tiếp trên thiết bị cá nhân của bạn.</p>
+      <p>Dữ liệu ván cờ: Thế cờ (FEN), lịch sử nước đi (PGN) và các cài đặt cá nhân (âm thanh, ngôn ngữ, cấp độ Bot) có thể được lưu trữ trong bộ nhớ máy của bạn (LocalStorage).</p>
+      <p>Không truy cập dữ liệu nhạy cảm: Ứng dụng không yêu cầu và không truy cập vào vị trí GPS, danh bạ, thư viện hình ảnh, camera hay micro của thiết bị.</p>
+
+      <h3>Điều 3: Dịch Vụ Quảng Cáo</h3>
+      <p>Ứng dụng có thể hiển thị quảng cáo từ các đối tác như Google AdMob theo chính sách hiện hành của Google.</p>
+      <p>Các đối tác quảng cáo như Google AdMob phân phối quảng cáo phải tuân thủ theo tiêu chuẩn và chính sách của Google Play.</p>
+      <p>Người dùng nâng cấp gói X-Ray Chess PRO sẽ được hỗ trợ tắt một số quảng cáo gián đoạn thông thường.</p>
+
+      <h3>Điều 4: Yêu Cầu Về Độ Tuổi & Bảo Hộ Trẻ Em</h3>
+      <p>Ứng dụng được thiết kế hướng đến người dùng từ 13 tuổi trở lên.</p>
+      <p>Đối với người dùng dưới 13 tuổi, việc cài đặt và sử dụng ứng dụng phải có sự đồng ý, giám sát và bảo hộ trực tiếp từ cha mẹ hoặc người giám hộ hợp pháp.</p>
+
+      <h3>Điều 5: Quyền Quản Lý Của Người Dùng</h3>
+      <p>Quyền quản lý, lưu giữ hoặc xóa bỏ dữ liệu và ứng dụng khỏi thiết bị thuộc toàn quyền quyết định của người sử dụng.</p>
+
+      <h3>Điều 6: Quy Định Hạn Mức, Xem Video, Chia Sẻ & Gói Bản Quyền PRO</h3>
+      <p>Hạn mức ngày: Người chơi miễn phí được cấp 03 ván phân tích mỗi ngày. Hạn mức này được tự động làm mới vào lúc 00:00 hàng ngày theo giờ hệ thống và hoàn toàn không có giá trị tích lũy hay cộng dồn sang ngày hôm sau.</p>
+      <p>Xem quảng cáo nhận lượt: Người dùng có thể nhận thêm ván đấu khi xem trọn vẹn thời lượng video quảng cáo theo hạn mức hệ thống quy định.</p>
+      <p>Chia sẻ ứng dụng: Người dùng có thể nhận thêm ván đấu thông qua việc chia sẻ ứng dụng và được áp dụng tối đa 01 lần trong mỗi chu kỳ 24 giờ.</p>
+      <p>Gói PRO: Mở khóa không giới hạn số ván cờ phân tích, mở khóa cấp độ Bot Đại Kiện Tướng, và hỗ trợ tắt một số quảng cáo gián đoạn thông thường.</p>
+      <p>Gói Trọn Đời (Lifetime): Áp dụng cho các tính năng tương ứng trong suốt vòng đời sản phẩm được nhà phát triển duy trì và hỗ trợ trên nền tảng. Nhà phát triển bảo lưu toàn quyền áp dụng điều khoản và biểu phí riêng đối với bất kỳ dịch vụ trực tuyến hoặc tính năng bổ sung nào được phát triển trong tương lai.</p>
+      <p>Thanh toán & Hoàn tiền: Toàn bộ giao dịch mua hàng, thanh toán, gia hạn định kỳ tự động, hủy gói và yêu cầu hoàn tiền được quản lý và xử lý trực tiếp theo chính sách và quy định hiện hành của Google Play. Nhà phát triển hoàn toàn không thu thập, không xử lý và không lưu trữ bất kỳ thông tin thẻ ngân hàng hoặc dữ liệu tài chính nào của bạn.</p>
+
+      <h3>Điều 7: Hành Vi Bị Nghiêm Cấm & Trách Nhiệm Bồi Thường</h3>
+      <p>Nghiêm cấm mọi hành vi can thiệp trái phép vào phần mềm, sử dụng công cụ gian lận hạn mức, tự động hóa giả mạo lượt xem quảng cáo hoặc sử dụng ứng dụng vào bất kỳ mục đích bất hợp pháp nào gây tổn hại đến hệ thống hoặc quyền lợi của nhà phát triển.</p>
+      <p>Bất kỳ hành vi vi phạm nào sẽ dẫn đến việc đình chỉ hoặc chấm dứt quyền sử dụng ngay lập tức mà không cần báo trước. Đồng thời, nhà phát triển bảo lưu toàn bộ quyền yêu cầu bồi thường toàn bộ thiệt hại thực tế phát sinh và tiến hành các biện pháp pháp lý cần thiết trước cơ quan chức năng hoặc tòa án có thẩm quyền.</p>
+
+      <h3>Điều 8: Giấy Phép Mã Nguồn Mở & Miễn Trừ Trách Nhiệm</h3>
+      <p>Thông báo giấy phép mã nguồn mở: Ứng dụng có tích hợp mã nguồn mở Stockfish chess engine theo giấy phép GNU General Public License v3 (GPL v3). Bản quyền đối với engine thuộc về các tác giả Stockfish. Mã nguồn gốc của Stockfish được công khai theo quy định của giấy phép.</p>
+      <p>Miễn trừ trách nhiệm: Ứng dụng được cung cấp trên cơ sở "nguyên trạng" (As-Is) và "sẵn có" (As-Available). Trong phạm vi tối đa pháp luật cho phép, nhà phát triển được miễn trừ toàn bộ trách nhiệm đối với mọi sự cố kỹ thuật, gián đoạn dịch vụ, mất mát dữ liệu hoặc hành vi phát sinh từ người dùng và bên thứ ba. Do đặc thù của nội dung kỹ thuật số và các quyền lợi được kích hoạt để sử dụng ngay lập tức sau khi thanh toán thành công, mọi giao dịch được ghi nhận là giao dịch cuối cùng và không áp dụng chính sách hoàn tiền mặc định, trừ trường hợp pháp luật có quy định bắt buộc khác. Mọi yêu cầu hỗ trợ hoặc đề nghị xem xét ngoại lệ (nếu có) được tiếp nhận và xử lý độc quyền thông qua hệ thống thanh toán của Google Play theo các chính sách hiện hành của nền tảng này.</p>
+
+      <h3>Điều 9: Điều Khoản Chung & Thông Tin Liên Hệ</h3>
+      <p>1. Hiệu lực & Sửa đổi: Nhà phát triển bảo lưu toàn quyền cập nhật hoặc điều chỉnh các điều khoản này khi cần thiết. Các sửa đổi sẽ có hiệu lực ngay khi được công bố trên ứng dụng. Việc bạn tiếp tục sử dụng ứng dụng đồng nghĩa với việc bạn chấp thuận toàn bộ các nội dung cập nhật đó.</p>
+      <p>2. Tính tách rời: Trường hợp bất kỳ điều khoản nào trong văn bản này bị cơ quan có thẩm quyền tuyên bố là vô hiệu hoặc không thể thi hành, các điều khoản còn lại vẫn giữ nguyên giá trị và hiệu lực pháp lý đầy đủ.</p>
+      <p>3. Luật điều chỉnh: Các điều khoản này được điều chỉnh và giải thích theo pháp luật Việt Nam. Mọi tranh chấp phát sinh (nếu có) sẽ thuộc thẩm quyền tài phán độc quyền của Tòa án có thẩm quyền tại Việt Nam.</p>
+      <p>4. Thông tin liên hệ: Mọi thắc mắc, phản hồi hoặc yêu cầu liên quan đến Điều khoản dịch vụ và Chính sách quyền riêng tư, người dùng có thể liên hệ với nhà phát triển qua email: hoangviet.cmo@gmail.com.</p>
+    </div>
+
+    <!-- ENGLISH CONTENT (ACCURATE 1-1 TRANSLATION) -->
+    <div id="content-en" style="display: none;">
       <h1>TERMS OF SERVICE & PRIVACY POLICY</h1>
       <div class="meta-subtitle">Updated: October 2026 · Governing X-Ray Chess Application</div>
 
@@ -254,21 +281,13 @@
       <h3>Article 5: User Management Authority</h3>
       <p>The authority to manage, retain, or delete data and remove the application from the device rests entirely with the user.</p>
 
-      <div id="subscriptions" class="subscription-box">
-        <h3 style="margin-top: 0; color: #fbbf24;">Article 6: In-App Purchases, Subscriptions & Cancellation Policy</h3>
-        <p><strong>1. Subscription Terms & Automatic Renewal:</strong> X-Ray Chess provides optional auto-renewing subscriptions (1 Month, 1 Year) and Lifetime access. Subscriptions automatically renew at the specified interval unless cancelled at least 24 hours prior to the conclusion of the active period. Payment is billed directly to your Google Play account upon confirmation of purchase.</p>
-        <p><strong>2. How to Manage or Cancel Your Subscription:</strong> You may modify payment methods or cancel your subscription at any time directly through Google Play Store account settings. Cancellation halts future recurring charges; premium privileges remain accessible through the end of the current paid billing cycle.</p>
-        <p><em>(Chính sách quản lý & hủy gói thuê bao: Quý khách có toàn quyền kiểm tra, đổi gói hoặc hủy gia hạn tự động bất kỳ lúc nào trực tiếp trong mục "Thanh toán & Gói thuê bao" trên ứng dụng Google Play Store theo đúng chính sách của Google.)</em></p>
-        <div style="margin: 12px 0;">
-          <a href="https://play.google.com/store/account/subscriptions?package=com.xraychess.app" target="_blank" rel="noopener noreferrer" class="btn-manage-sub">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            Manage Subscription on Google Play
-          </a>
-        </div>
-        <p style="margin-top: 8px; font-size: 0.84rem; color: #94a3b8;">
-          Daily Quota: Free users receive 03 daily game analyses (reset at 00:00). Additional credits may be earned via rewarded video ads or application sharing within configured daily limits.
-        </p>
-      </div>
+      <h3>Article 6: Quotas, Rewarded Videos, Sharing & PRO License</h3>
+      <p>Daily quota: Free users receive 03 analysis matches per day. This quota automatically resets at 00:00 daily system time and does not accumulate or roll over to the following day.</p>
+      <p>Rewarded videos: Users may earn additional game credits upon viewing complete rewarded video advertisements within system limits.</p>
+      <p>Application sharing: Users may earn additional game credits by sharing the application, limited to a maximum of 01 time every 24-hour cycle.</p>
+      <p>PRO plan: Unlocks unlimited match analyses, unlocks Grandmaster Bot levels, and supports the removal of certain standard disruptive advertisements.</p>
+      <p>Lifetime plan: Applies to designated features throughout the product operational lifecycle maintained and supported by the developer on the platform. The developer reserves the right to apply distinct terms and fees for any online services or additional features developed in the future.</p>
+      <p>Billing & refunds: All purchase transactions, payments, automated renewals, cancellations, and refund requests are managed and processed directly in accordance with Google Play policies and guidelines. The developer does not collect, process, or store any of your credit card details or financial information.</p>
 
       <h3>Article 7: Prohibited Conduct & Legal Liability</h3>
       <p>Any unauthorized tampering with software, use of quota exploit tools, automated fraudulent ad-view generation, or use of the application for unlawful purposes harming the system or developer rights is strictly prohibited.</p>
@@ -287,9 +306,45 @@
 
     <!-- Footer Actions -->
     <div class="footer-actions">
-      <a href="index.html" class="back-btn" id="btn-back-home">← Back to Game</a>
+      <a href="index.html" class="back-btn" id="btn-back-home">← Trở Về Bàn Cờ / Back to Game</a>
       <div class="copyright-note">© 2026 X-Ray Chess. All rights reserved.</div>
     </div>
   </div>
+
+  <script>
+    function switchLanguage(lang) {
+      const viContent = document.getElementById('content-vi');
+      const enContent = document.getElementById('content-en');
+      const btnVi = document.getElementById('btn-lang-vi');
+      const btnEn = document.getElementById('btn-lang-en');
+
+      if (lang === 'en') {
+        viContent.style.display = 'none';
+        enContent.style.display = 'block';
+        btnVi.classList.remove('active');
+        btnEn.classList.add('active');
+        try { localStorage.setItem('xray_legal_lang', 'en'); } catch(e) {}
+      } else {
+        viContent.style.display = 'block';
+        enContent.style.display = 'none';
+        btnVi.classList.add('active');
+        btnEn.classList.remove('active');
+        try { localStorage.setItem('xray_legal_lang', 'vi'); } catch(e) {}
+      }
+    }
+
+    // Auto detect language from app settings or browser
+    (function initLang() {
+      let saved = null;
+      try {
+        saved = localStorage.getItem('xray_legal_lang') || localStorage.getItem('xray_chess_lang');
+      } catch(e) {}
+      if (saved && saved.startsWith('en')) {
+        switchLanguage('en');
+      } else {
+        switchLanguage('vi');
+      }
+    })();
+  </script>
 </body>
 </html>

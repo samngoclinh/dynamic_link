@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>BabyEnglish · Học Tiếng Anh Mầm Non Montessori (2-6 Tuổi)</title>
+  
+  <!-- ======================================================== -->
+  <!-- 🏷️ META OPEN GRAPH & TWITTER CARD (FACEBOOK SCALABILITY)  -->
+  <!-- ======================================================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:url" content="https://samngoclinh.github.io/dynamic_link/BabyEnglish/">
+  <meta property="og:title" content="Bé Đạt 5 Sao Vàng Tiếng Anh - BabyEnglish Playroom 🌟">
+  <meta property="og:description" content="Chúc mừng bé đã xuất sắc hoàn thành thử thách! Cùng tải BabyEnglish để bé vừa học vừa chơi 16 mini-games chuẩn Montessori 52 tuần nhé!">
+  <meta property="og:image" content="https://samngoclinh.github.io/dynamic_link/BabyEnglish/og_babyenglish.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="BabyEnglish">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bé Đạt 5 Sao Vàng Tiếng Anh - BabyEnglish 🌟">
+  <meta name="twitter:description" content="Khám phá phòng học tiếng Anh Montessori cho bé 2-6 tuổi.">
+  <meta name="twitter:image" content="https://samngoclinh.github.io/dynamic_link/BabyEnglish/og_babyenglish.png">
+  
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+
+  <script>
+    // =========================================================================
+    // ⚙️ CẤU HÌNH LINK TẢI CHO BABYENGLISH (SỬA DỄ DÀNG NGAY TẠI ĐÂY)
+    // =========================================================================
+    const IOS_STORE_URL     = "https://apps.apple.com/app/id000000000"; 
+    const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.babyenglish.playroom"; 
+    const WEB_FALLBACK_URL  = "https://samngoclinh.github.io/dynamic_link/BabyEnglish/";
+
+    // ⚡ CHUYỂN TIẾP TỨC THÌ 0 GIÂY (INSTANT 0MS - HOÀN TOÀN TÀNG HÌNH TRÊN DI ĐỘNG)
+    (function instantRedirect() {
+      var ua = navigator.userAgent || navigator.vendor || window.opera || '';
+      var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+      var isAndroid = /android/i.test(ua);
+
+      // Nếu có query param ?preview=true thì không redirect (dùng để xem landing page trên mobile)
+      if (window.location.search.indexOf('preview=true') !== -1) {
+        return;
+      }
+
+      if (isIOS) {
+        window.location.replace(IOS_STORE_URL);
+      } else if (isAndroid) {
+        window.location.replace(ANDROID_STORE_URL);
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(135deg, #FFFDF7 0%, #FFF8E7 50%, #FFE0B2 100%);
+      color: #3E2723;
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Pastel Bubbles */
+    .bg-bubble {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(40px);
+      z-index: 0;
+    }
+    .bubble-1 { width: 340px; height: 340px; background: rgba(255, 128, 171, 0.22); top: -60px; left: -80px; }
+    .bubble-2 { width: 380px; height: 380px; background: rgba(255, 213, 79, 0.28); bottom: -80px; right: -80px; }
+    .bubble-3 { width: 280px; height: 280px; background: rgba(128, 203, 196, 0.25); top: 35%; right: 10%; }
+
+    .card-container {
+      position: relative;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border: 4px solid #FFE082;
+      border-radius: 36px;
+      padding: 44px 36px;
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(62, 39, 35, 0.12), 0 4px 12px rgba(255, 160, 0, 0.08);
+      animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .app-icon-ring {
+      width: 120px;
+      height: 120px;
+      border-radius: 32px;
+      background: linear-gradient(135deg, #FF6B8B 0%, #FFA726 100%);
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 14px 28px rgba(255, 107, 139, 0.35);
+      border: 4px solid #FFFFFF;
+      font-size: 4rem;
+      animation: gentleBounce 2.6s infinite ease-in-out;
+    }
+    @keyframes gentleBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .brand-tag {
+      display: inline-block;
+      background: #FFF3E0;
+      color: #E65100;
+      border: 2px solid #FFE082;
+      border-radius: 20px;
+      padding: 5px 18px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: 'Fredoka', cursive, sans-serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: #D81B60;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #5D4037;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+    .feature-pill {
+      background: #FFFDF7;
+      border: 2px solid #FFE082;
+      border-radius: 18px;
+      padding: 10px 6px;
+    }
+    .feature-icon { font-size: 1.6rem; display: block; margin-bottom: 4px; }
+    .feature-text { font-size: 0.82rem; font-weight: 800; color: #4E342E; }
+
+    .download-section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #795548;
+      margin-bottom: 14px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .btn-store {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 15px 24px;
+      border-radius: 22px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.15rem;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .btn-store:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    }
+    .btn-store:active { transform: scale(0.96); }
+
+    .btn-apple {
+      background: #000000;
+      color: #FFFFFF;
+      border: 3px solid #333333;
+    }
+    .btn-google {
+      background: linear-gradient(135deg, #00897B 0%, #004D40 100%);
+      color: #FFFFFF;
+      border: 3px solid #80CBC4;
+    }
+
+    /* QR Code Box */
+    .qr-box {
+      background: #FFF8E1;
+      border: 2.5px dashed #FFCA28;
+      border-radius: 24px;
+      padding: 16px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .qr-canvas {
+      width: 140px;
+      height: 140px;
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .qr-text {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #E65100;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: #8D6E63;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-bubble bubble-1"></div>
+  <div class="bg-bubble bubble-2"></div>
+  <div class="bg-bubble bubble-3"></div>
+
+  <div class="card-container">
+    <div class="app-icon-ring">🌟</div>
+    <div class="brand-tag">🌸 Montessori Early Learning (2-6 Tuổi)</div>
+    <h1>BabyEnglish Playroom</h1>
+    <p class="subtitle">Mỗi ngày 1 trò chơi mới & 1 sticker reo vui!<br>Học tiếng Anh tự nhiên không áp lực cùng mẹ.</p>
+
+    <div class="features-grid">
+      <div class="feature-pill">
+        <span class="feature-icon">🎡</span>
+        <span class="feature-text">16 Mini-Games</span>
+      </div>
+      <div class="feature-pill">
+        <span class="feature-icon">🗺️</span>
+        <span class="feature-text">52 Tuần Khám Phá</span>
+      </div>
+      <div class="feature-pill">
+        <span class="feature-icon">🏆</span>
+        <span class="feature-text">Bằng Khen Khoe FB</span>
+      </div>
+    </div>
+
+    <div class="download-section-title">📱 Tải Ứng Dụng Miễn Phí Cho Bé:</div>
+
+    <div class="btn-group">
+      <a href="https://apps.apple.com/app/id000000000" id="link-apple" class="btn-store btn-apple">
+        <span>🍏</span>
+        <span>Tải trên Apple App Store</span>
+      </a>
+
+      <a href="https://play.google.com/store/apps/details?id=com.babyenglish.playroom" id="link-google" class="btn-store btn-google">
+        <span>🤖</span>
+        <span>Tải trên Google Play</span>
+      </a>
+    </div>
+
+    <!-- QR Code để ba mẹ quét camera điện thoại -->
+    <div class="qr-box">
+      <canvas id="qr-canvas" class="qr-canvas"></canvas>
+      <div class="qr-text">📷 Dùng Camera điện thoại quét để cài ngay</div>
+    </div>
+
+    <footer>
+      BabyEnglish © 2026 · Phát triển với tình yêu thương dành cho bé
+    </footer>
+  </div>
+
+  <!-- QR Code Generator script (Zero Dependency Canvas QR) -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script>
+    // Sinh mã QR dẫn về chính link này để bố mẹ quét điện thoại
+    window.addEventListener('DOMContentLoaded', function() {
+      const canvas = document.getElementById('qr-canvas');
+      if (canvas && typeof QRCode !== 'undefined') {
+        QRCode.toCanvas(canvas, window.location.href, {
+          width: 140,
+          margin: 1,
+          color: {
+            dark: '#D81B60',
+            light: '#FFFFFF'
+          }
+        }, function (error) {
+          if (error) console.error(error);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
