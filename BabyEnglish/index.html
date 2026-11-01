@@ -224,13 +224,14 @@
       gap: 8px;
       margin-top: 6px;
     }
-    .qr-canvas {
+    .qr-img {
       width: 140px;
       height: 140px;
       border-radius: 12px;
       background: #FFFFFF;
       padding: 6px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      display: block;
     }
     .qr-text {
       font-size: 0.88rem;
@@ -289,7 +290,7 @@
 
     <!-- QR Code để ba mẹ quét camera điện thoại -->
     <div class="qr-box">
-      <canvas id="qr-canvas" class="qr-canvas"></canvas>
+      <img src="qr_babyenglish.png" alt="Mã QR Cài App BabyEnglish" class="qr-img">
       <div class="qr-text">📷 Dùng Camera điện thoại quét để cài ngay</div>
     </div>
 
@@ -298,25 +299,5 @@
     </footer>
   </div>
 
-  <!-- QR Code Generator script (Zero Dependency Canvas QR) -->
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
-  <script>
-    // Sinh mã QR dẫn về chính link này để bố mẹ quét điện thoại
-    window.addEventListener('DOMContentLoaded', function() {
-      const canvas = document.getElementById('qr-canvas');
-      if (canvas && typeof QRCode !== 'undefined') {
-        QRCode.toCanvas(canvas, window.location.href, {
-          width: 140,
-          margin: 1,
-          color: {
-            dark: '#D81B60',
-            light: '#FFFFFF'
-          }
-        }, function (error) {
-          if (error) console.error(error);
-        });
-      }
-    });
-  </script>
 </body>
 </html>
